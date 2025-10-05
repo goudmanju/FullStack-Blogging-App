@@ -77,3 +77,7 @@ kubectl get nodes
 **Use these secrets/tokens for authentication and deployment.**
 
 u will get the token copy the token and paste in jenkins credentials
+
+here is the deployment application for this pipeline
+
+<img width="245" height="215" alt="image" src="https://github.com/user-attachments/assets/8154f86f-d6a3-4645-971f-5c911b03341f" />
