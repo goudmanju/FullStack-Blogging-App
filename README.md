@@ -45,6 +45,9 @@ cat /nexus/admin.password
 •	Deploy applications using AWS EKS cluster.
 •	Setup EKS with Terraform scripts.
 
+<img width="1152" height="648" alt="image" src="https://github.com/user-attachments/assets/992a09f1-f13b-4f63-ad6e-9d7770fca537" />
+
+
 **8. Secondary Server Setup**
 Launch an additional server.
 Install Terraform.
