@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bloggingapp-deployment
+  name: productionno-1-deployment
 spec:
   selector:
     matchLabels:
-      app: bloggingapp
+      app: productionno-1
   replicas: 2
   template:
     metadata:
       labels:
-        app: bloggingapp
+        app: productionno-1
     spec:
       containers:
-        - name: bloggingapp
+        - name: productionno-1
           image: manjugoud/productionno-1 # Updated image to private DockerHub image
           imagePullPolicy: Always
           ports:
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bloggingapp-ssvc
+  name: productionno-1-ssvc
 spec:
   selector:
-    app: bloggingapp
+    app: productionno-1
   ports:
     - protocol: "TCP"
       port: 80
