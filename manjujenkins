@@ -39,7 +39,7 @@ pipeline {
         }
         stage('Sonaranalysis') {
             steps {
-                withSonarQubeEnv('sonar-server') {
+                withSonarQubeEnv('sonar-scanner') {
                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=production-no1 -Dsonar.projectKey=production-no1 \
                       -Dsonar.java.binaries=target '''
                   }
@@ -49,7 +49,7 @@ pipeline {
             steps {
                 script {
                  withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
-                   sh  'docker build -t manjugoud/productionno-1 .'
+                   sh  'docker build -t manjugoud/productionno-1:latest .'
                    }
                 }
             }
@@ -64,10 +64,26 @@ pipeline {
                 script {
                // This step should not normally be used in your script. Consult the inline help for details.
                  withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
-                   sh  'docker push manjugoud/productionno-1'
+                   sh  'docker push manjugoud/productionno-1:latest'
                    }
                 }
             }
             }
+        stage('K8-deploy') {
+           steps {
+            withKubeConfig(caCertificate: '', clusterName: 'devopsshack-cluster', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://47A67B79682CCDDF89EC6F73ED0143B2.gr7.us-east-1.eks.amazonaws.com') {
+              sh 'kubectl apply -f deployment-service.yml'
+              sleep 20
+              }
+            }
+        }
+        stage('verify-deployment') {
+           steps {
+            withKubeConfig(caCertificate: '', clusterName: 'devopsshack-cluster', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://47A67B79682CCDDF89EC6F73ED0143B2.gr7.us-east-1.eks.amazonaws.com') {
+              sh 'kubectl get pods'
+              sh 'kubectl get svc'
+              }
+            }
+        }
         }
     }
