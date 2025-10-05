@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: productionno-1
-          image: manjugoud/productionno-1 # Updated image to private DockerHub image
+          image: manjugoud/productionno-1:latest # Updated image to private DockerHub image
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
