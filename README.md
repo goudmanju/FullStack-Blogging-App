@@ -60,9 +60,15 @@ kubectl get nodes
 •	Role
 •	RoleBinding
 • ⁠Create tokens for these resources.
+
 **Final steps**
+
 **Get secrets for namespace webapps:**
+
 **kubectl get secrets -n webapps**
+
 **kubectl describe secret <secret_name> -n webapps**
+
 **Use these secrets/tokens for authentication and deployment.**
+
 u will get the token copy the token and paste in jenkins credentials
