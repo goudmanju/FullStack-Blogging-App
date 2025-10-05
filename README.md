@@ -1,9 +1,9 @@
 **Jenkins and EKS Deployment with Terraform and Docker Setup**
-<img width="309" height="331" alt="image" src="https://github.com/user-attachments/assets/9b228bee-5684-4710-b473-f1288a4afd01" />
+<img width="241" height="209" alt="image" src="https://github.com/user-attachments/assets/9b228bee-5684-4710-b473-f1288a4afd01" />
 <img width="241" height="209" alt="image" src="https://github.com/user-attachments/assets/a263490a-dde5-4a85-92ba-88f4de6244ff" />
-<img width="332" height="152" alt="image" src="https://github.com/user-attachments/assets/a801fbf7-66ed-453d-a6c2-3db01b21d7dc" />
-<img width="225" height="224" alt="image" src="https://github.com/user-attachments/assets/a3ffeec0-02e1-4d1a-9671-1b8410f57cff" />
-<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/ace329ae-271b-4ea9-ab60-5576c4209056" />
+<img width="241" height="209" alt="image" src="https://github.com/user-attachments/assets/a801fbf7-66ed-453d-a6c2-3db01b21d7dc" />
+<img width="241" height="209" alt="image" src="https://github.com/user-attachments/assets/a3ffeec0-02e1-4d1a-9671-1b8410f57cff" />
+<img width="241" height="209" alt="image" src="https://github.com/user-attachments/assets/ace329ae-271b-4ea9-ab60-5576c4209056" />
 
 **Overview**
 This documentation outlines the steps to set up Jenkins and EKS clusters for deploying applications, using Docker, Terraform, and Kubernetes tools. The setup consists of launching Jenkins servers, configuring Docker and SonarQube, and deploying applications on an EKS cluster.
