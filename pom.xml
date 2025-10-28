@@ -105,8 +105,8 @@
             <url>http://54.91.144.207:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://54.91.144.207:8081/repository/manju-snapshots/</url>
+            <id>manju-snapshots</id>
+            <url>http://54.91.144.207:8081/repository/manju-snapshots//</url>
         </snapshotRepository>
     </distributionManagement>
 
